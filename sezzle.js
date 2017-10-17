@@ -491,6 +491,7 @@ SezzleJS.prototype.observer = new MutationObserver(function(mutations) {
       delete s;
       document.getElementsByClassName('sezzleindex-' + priceIndex)[0]
         .innerText = ' of ' + price;
+      s.hideSezzleHideDivs();
     });
 });
 
