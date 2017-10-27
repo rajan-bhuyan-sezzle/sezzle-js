@@ -149,7 +149,7 @@ SezzleJS.prototype.parsePrice = function(price) {
  * @return string
  */
 SezzleJS.prototype.cleanText = function(price) {
-  var formattedPrice = price.replace("Subtotal", "");
+  var formattedPrice = price.replace("Subtotal", ""); // Just add a new line with every thing you want to replace
   return formattedPrice;
 }
 
