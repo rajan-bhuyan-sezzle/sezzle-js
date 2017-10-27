@@ -76,7 +76,7 @@ SezzleJS.prototype.getAllPriceElements = function(xpath = '', xindex = 0, elemen
     return elements;
   }
 
-  // Intialy when elements is null
+  // Initially when elements is null
   // We give document to it
   if (elements === null) {
     elements = [document];
@@ -144,6 +144,16 @@ SezzleJS.prototype.parsePrice = function(price) {
 }
 
 /**
+ * This function will remove known problem phrases around money
+ * @param price - string value
+ * @return string
+ */
+SezzleJS.prototype.cleanText = function(price) {
+  var formattedPrice = price.replace("Subtotal", "");
+  return formattedPrice;
+}
+
+/**
  * This function will return the price string
  * @param price - string value
  * @param includeComma - comma should be added to the string or not
@@ -154,8 +164,8 @@ SezzleJS.prototype.parsePriceString = function(price, includeComma) {
   for (var i = 0; i < price.length; i++) {
     if (this.isNumeric(price[i]) || price[i] == '.' || (includeComma && price[i] == ',')) {
       // If current is a . and previous is a character, it can be something like Rs.
-      // so ignore it
-      if (i > 0 && price[i] == '.' && this.isAlpha(price[i - 1])) continue;
+			// so ignore it
+			if (i > 0 && price[i] == '.' && this.isAlpha(price[i - 1])) continue;
       formattedPrice += price[i];
     }
   }
@@ -457,22 +467,25 @@ SezzleJS.prototype.isProductEligible = function(priceText) {
  * @param priceText Complete price test Eg: $120.00 USD
  */
 SezzleJS.prototype.getFormattedPrice = function(priceText) {
-  // Get the price string - useful for formtting Eg: 120.00(string)
+  // Get the price text - remove text like 'Subtotal', etc that can show up
+  var newPriceText = this.cleanText(priceText);
+
+	// Get the price string - useful for formatting Eg: 120.00(string)
   var priceString = this.parsePriceString(priceText, true);
 
   // Get the price in float from the element - useful for calculation Eg : 120.00(float)
   var price = this.parsePrice(priceText);
 
   // Will be used later to replace {price} with price / 4.0 Eg: ${price} USD
-  var formatter = priceText.replace(priceString, '{price}');
+	var formatter = newPriceText.replace(priceString, '{price}');
 
   // get the sezzle instalment price
-  var sezzleInstalmentPrice = (price / 4.0).toFixed(2);
+  var sezzleInstallmentPrice = (price / 4.0).toFixed(2);
 
   // format the string
-  var sezzleInstalmentFormattedPrice = formatter.replace('{price}', sezzleInstalmentPrice);
+  var sezzleInstallmentFormattedPrice = formatter.replace('{price}', sezzleInstallmentPrice);
 
-  return sezzleInstalmentFormattedPrice;
+  return sezzleInstallmentFormattedPrice;
 }
 
 /**
