@@ -560,6 +560,7 @@
 
   .sezzle-button-text {
     max-width: 340px;
+    width: unset;
     line-height: 28px;
     margin: 0 auto;
     text-align: center;
@@ -570,10 +571,12 @@
 
     &.sezzle-thin {
       max-width: 240px;
+      width: unset;
       line-height: 28px;
 
       &.sezzle-hide-amount {
         max-width: 180px;
+        width: unset;
       }
     }
   }
@@ -602,11 +605,13 @@
     display: flex;
     justify-content: center;
     max-width: 320px;
+    width: unset;
     margin: 0 auto;
     line-height: 25px;
 
     &.sezzle-thin {
       max-width: 185px;
+      width: unset;
     }
   }
 
@@ -1014,7 +1019,7 @@
     .sezzle-checkout-button-wrapper {
       @media (max-width: 740px) {
         .sezzle-button-text {
-          text-align: unset;
+          text-align: center;
           margin: 0 auto;
         }
 
@@ -1502,6 +1507,124 @@
     @media screen and (max-width: 749px) {
       float: none !important;
       justify-content: center !important;
+    }
+  }
+}
+
+// Harlyn Summer
+.sezzle-a12a43c8-a8cc-4dd2-ae95-3d6496fc4b69 {
+  &.sezzle-product-page-widget {
+    margin-top: -25px;
+
+    .sezzle-button-text {
+      @media screen and (max-width: 770px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 770px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+
+  &.sezzle-cart-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 770px) {
+        float: left;
+        text-align: left;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 770px) {
+        float: left;
+        justify-content: left;
+      }
+    }
+  }
+}
+
+//Future Bikini
+.sezzle-f8b9b207-c70d-4f04-99f7-4494525689d9 {
+  &.sezzle-cart-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+}
+
+// Sneaker Oven
+.sezzle-2ac79df0-6e55-41f6-86b0-6e54844768a6 {
+  &.sezzle-product-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 767px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 767px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+  &.sezzle-cart-page-widget {
+    margin-bottom: 30px;
+    margin-top: -35px;
+  }
+}
+
+// MILF Life
+.sezzle-71640da3-96cb-4f5c-b41b-56a80a867d99 {
+  &.sezzle-cart-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+}
+
+// One Fleur
+.sezzle-f47fc1f3-5efe-4f8c-b2f2-f21ebee71899 {
+  &.sezzle-cart-page-widget {
+    .sezzle-button-text {
+      font-size: 12px;
+      @media screen and (max-width: 740px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      font-size: 12px;
+      @media screen and (max-width: 740px) {
+        float: none !important;
+        justify-content: center !important;
+      }
     }
   }
 }
