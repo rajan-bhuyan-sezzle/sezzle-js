@@ -49,6 +49,9 @@ var SezzleJS = function(options) {
   this.maxPrice = options.maxPrice || 100000;
   this.imageUrl = options.imageUrl || 'https://d3svog4tlx445w.cloudfront.net/branding/sezzle-logos/png/sezzle-logo-sm-100w.png';
   this.hideClasses = options.hideClasses || [];
+  this.bannerURL = options.bannerUrl || '';
+  this.bannerClass = options.bannerClass || '';
+  this.bannerLink = options.bannerLink || '';
 
   // Non configurable options
   this._config = { attributes: true, childList: true, characterData: true };
@@ -674,6 +677,34 @@ SezzleJS.prototype.hideSezzleHideDivs = function() {
 }
 
 /**
+ * Replaces the afterpay banner
+ * 
+ */
+SezzleJS.prototype.replaceBanner = function() {
+  var imgurl = this.bannerURL;
+  var linkpath = this.bannerLink;
+  var bannerClass = this.bannerClass;
+
+  if (bannerClass != '') {
+    var element = document.getElementsByClassName(bannerClass)[0];
+    
+    if (linkpath != '') {
+      var link = element.getElementsByTagName("a");
+      if(link[0] != null) {
+        link[0].setAttribute('href', linkpath);
+      }
+    }
+
+    if (imgurl != '') {
+      var img = element.getElementsByTagName("img");
+      if(img[0] != null) {
+        img[0].setAttribute('src', imgurl);
+      }
+    }
+  }
+}
+
+/**
  * Initialise the widget if the
  * country is supported or the widget
  * is forced to be shown
@@ -689,6 +720,7 @@ SezzleJS.prototype.init = function() {
       if (this.supportedCountryCodes.indexOf(countryCode) !== -1) {
         this.initWidget();
         this.hideSezzleHideDivs();
+        this.replaceBanner();
       }
     }.bind(this));
   }
