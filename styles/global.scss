@@ -1312,7 +1312,22 @@
 .sezzle-4a35c6be-04a2-48a6-9299-84a28a979dad {
 	&.sezzle-shopify-info-button{
 		overflow: unset;
-	}
+  }
+
+  &.sezzle-cart-page-widget {
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      margin-right: -280%;
+    }
+    @media screen and (max-width: 996px) and (min-width: 980px){
+      margin-right: -353%;
+    }
+    @media screen and (max-width: 1199px) and (min-width: 997px){
+      margin-right: -185%;
+    }
+    @media screen and (min-width: 1200px){
+      margin-right: -250%;
+    }
+  }
 }
 
 //Eau Paix Vie
@@ -1511,6 +1526,13 @@
   }
 }
 
+// Lace face
+.sezzle-13e4e562-c13f-4d95-adbf-1f65ef3dc55d {
+	padding-top: 7px;
+	font-weight: 400;
+	zoom: 0.9;
+}
+
 // Harlyn Summer
 .sezzle-a12a43c8-a8cc-4dd2-ae95-3d6496fc4b69 {
   &.sezzle-product-page-widget {
@@ -1626,5 +1648,112 @@
         justify-content: center !important;
       }
     }
+  }
+}
+
+// Wolves Stuff
+.sezzle-2993fde2-31c6-40ec-965f-c17d466e0cfa {
+  &.sezzle-product-page-widget {
+    color: black;
+    .sezzle-button-text {
+      max-width: unset;
+      @media screen and (max-width: 1023px) {
+        text-align: right;
+      }
+    }
+    .sezzle-checkout-button {
+      font-size: 12px;
+      @media screen and (max-width: 1023px) {
+        float: right;
+      }
+    }
+  }
+  &.sezzle-cart-page-widget {
+    color: black;
+    white-space: normal;
+    @media screen and (max-width: 1023px) {
+      margin-left: -155px;
+    }
+    .sezzle-button-text {
+      @media screen and (max-width: 1023px) {
+        text-align: right;
+        float: right;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 1023px) {
+        float: right;
+        clear: both;
+      }
+    }
+  }
+}
+
+// Sun N Fun
+.sezzle-2c7cd3c7-f4b7-4737-925d-bd0cf8f3cf09 {
+  &.sezzle-product-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+  &.sezzle-cart-page-widget {
+    .sezzle-button-text {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 749px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+}
+
+// multi color leds
+.sezzle-867f532a-750a-43a8-9bb6-56cc9e2ea085 {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+// Generation Outcast Clothing
+.sezzle-d157dcc9-ad3b-4f15-b4ba-2d80b5b2081e {
+  &.sezzle-cart-page-widget {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    .sezzle-button-text {
+      @media screen and (max-width: 740px) {
+        float: none !important;
+        text-align: center !important;
+        margin: auto !important;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 740px) {
+        float: none !important;
+        justify-content: center !important;
+      }
+    }
+  }
+}
+
+// Opes Robur
+.sezzle-abef9ebb-524a-43b8-8f98-9e10a7846bec {
+  &.sezzle-product-page-widget {
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 }
