@@ -25,7 +25,19 @@ var SezzleJS = function(options) {
       // options.renderToPath is an array of x-paths
       this.rendertopath = options.renderToPath;
     }
-  }
+	}
+
+	this.rendertopath_absolute = [];
+  if (options.renderToPathAbsolute) {
+    if (typeof(options.renderToPathAbsolute) === 'string') {
+      // Only one respective render location is given
+      this.rendertopath_absolute.push(options.renderToPathAbsolute);
+    } else {
+      // options.renderToPath is an array of x-paths
+      this.rendertopath_absolute = options.renderToPathAbsolute;
+    }
+	}
+
   // Sync up the rendertopath array with
   // xpath array, place null for not defined indices
   // to follow the default behaviour
@@ -36,6 +48,14 @@ var SezzleJS = function(options) {
           this.rendertopath[index].trim() : null;
     } else {
       this.rendertopath.push(null);
+		}
+		if (index in this.rendertopath_absolute) {
+      this.rendertopath_absolute[index] =
+        this.rendertopath_absolute[index].trim() != '' ?
+          this.rendertopath_absolute[index].trim() : null;
+    } else {
+			// check the absolute render to (only one or the other works)
+      this.rendertopath_absolute.push(null);
     }
   }.bind(this));
 
@@ -79,7 +99,7 @@ SezzleJS.prototype.getAllPriceElements = function(xpath = '', xindex = 0, elemen
     return elements;
   }
 
-  // Intialy when elements is null
+  // Initially when elements is null
   // We give document to it
   if (elements === null) {
     elements = [document];
@@ -117,6 +137,59 @@ SezzleJS.prototype.getAllPriceElements = function(xpath = '', xindex = 0, elemen
   }
   children = children.filter(function(c) {return c !== null});
   return this.getAllPriceElements(xpath, xindex + 1, children);
+}
+
+/**
+ * This function fetches all the elements that we want to attach to if we decide to render in an absolute path
+ * @param xindex - Current xpath index value to be resolved [initial value is always 0]
+ * @param elements - Array of current elements to be resolved [initial value is always null]
+ *
+ * @return All the elements that matches the xpath
+ */
+SezzleJS.prototype.getAllAbsoluteRenderToElements = function(xpath = '', xindex = 0, elements = null) {
+  // Break condition
+  if (xindex === xpath.length) {
+    return elements;
+  }
+
+  // Initially when elements is null
+  // We give document to it
+  if (elements === null) {
+    elements = [document];
+  }
+  var children = [];
+  for(var elemnt of Array.from(elements)) {
+    // If this is an ID
+    if (xpath[xindex][0] === '#') {
+      children.push(elemnt.getElementById(xpath[xindex].substr(1)));
+    } else
+    // If this is a class
+    if (xpath[xindex][0] === '.') {
+      Array.from(
+        elemnt.getElementsByClassName(xpath[xindex].substr(1))
+      )
+      .forEach(function(el) {
+          children.push(el);
+      })
+		}
+    // If this is a tag
+    {
+      var indexToTake = 0;
+      if (xpath[xindex].split('-').length > 1) {
+        if (xpath[xindex].split('-')[1] >= 0) {
+          indexToTake = parseInt(xpath[xindex].split('-')[1]);
+        }
+      }
+      Array.from(
+        elemnt.getElementsByTagName(xpath[xindex].split('-')[0])
+      )
+      .forEach(function(el, index) {
+          if (index === indexToTake) children.push(el);
+      });
+    }
+  }
+  children = children.filter(function(c) {return c !== null});
+  return this.getAllAbsoluteRenderToElements(xpath, xindex + 1, children);
 }
 
 /**
@@ -421,7 +494,44 @@ SezzleJS.prototype.getElementToRender = function(element, index = 0) {
           toRenderElement.getElementsByTagName(p.split('-')[0])[indexToTake] :
             null;
       }
-    }
+		}
+	  if (this.rendertopath_absolute[index] !== null) {
+			var path = this.rendertopath_absolute[index].split('/');
+			var toRenderElement = element;
+			for(var i = 0; i < path.length; i++) {
+				var p = path[i];
+				if (toRenderElement == null) {
+					break;
+				} else if (p === '.') {
+					continue;
+				} else if (p === '..') {
+					// One level back
+					toRenderElement = toRenderElement.parentElement;
+				} else if (p[0] === '.') {
+					// The class in the element
+					toRenderElement =
+						toRenderElement.getElementsByClassName(p.substr(1)).length ?
+							toRenderElement.getElementsByClassName(p.substr(1))[0] :
+							null ;
+				} else if (p[0] === '#') {
+					// The ID in the element
+					toRenderElement =
+						toRenderElement.getElementById(p.substr(1));
+				} else {
+					// If this is a tag
+					// e.g. span-2 means second span
+					var indexToTake = 0;
+					if (p.split('-').length > 1) {
+						if (p.split('-')[1] >= 0) {
+							indexToTake = parseInt(p.split('-')[1]);
+						}
+					}
+					toRenderElement =
+						toRenderElement.getElementsByTagName(p.split('-')[0]).length > indexToTake ?
+						toRenderElement.getElementsByTagName(p.split('-')[0])[indexToTake] :
+							null;
+				}
+			}
   }
   if (toRenderElement === null) {
     // No path defined
@@ -678,7 +788,7 @@ SezzleJS.prototype.hideSezzleHideDivs = function() {
 
 /**
  * Replaces the afterpay banner
- * 
+ *
  */
 SezzleJS.prototype.replaceBanner = function() {
   var imgurl = this.bannerURL;
@@ -687,7 +797,7 @@ SezzleJS.prototype.replaceBanner = function() {
 
   if (bannerClass != '') {
     var element = document.getElementsByClassName(bannerClass)[0];
-    
+
     if (linkpath != '') {
       var link = element.getElementsByTagName("a");
       if(link[0] != null) {
