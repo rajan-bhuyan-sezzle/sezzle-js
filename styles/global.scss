@@ -548,7 +548,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0 0 10px;
-  font-size: 15px;
+  font-size: 13px;
 
   .sezzle-button-text {
     max-width: 340px;
@@ -558,7 +558,7 @@
     text-align: center;
     word-wrap: normal;
     @media (max-width: 350px) {
-      font-size: 14px;
+      font-size: 13px;
     }
 
     &.sezzle-thin {
@@ -584,7 +584,7 @@
     padding-right: 6px;
     padding-top: 2px;
     @media (max-width: 350px) {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
 
@@ -1998,6 +1998,15 @@
         float: none !important;
         justify-content: center !important;
       }
+    }
+  }
+}
+
+// Moana Bikini
+.sezzle-4fb38431-8112-4228-8d8c-b85b13146255 {
+  &.sezzle-cart-page-widget {
+    .sezzle-checkout-button-wrapper {
+      font-size: 13px;
     }
   }
 }
