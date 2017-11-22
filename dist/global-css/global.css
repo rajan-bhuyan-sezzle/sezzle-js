@@ -346,7 +346,12 @@
 }
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
   display: block;
+<<<<<<< HEAD
   text-align: center;
+=======
+  text-align: left;
+  max-width: 450px;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
   text-transform: none;
   font-size: 12pt;
   line-height: 25px;
@@ -409,7 +414,11 @@
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 {
   font-size: 18px;
+<<<<<<< HEAD
   text-align: center;
+=======
+  text-align: left;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -458,7 +467,11 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0 0 10px;
+<<<<<<< HEAD
   font-size: 15px;
+=======
+  font-size: 13px;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
   /* Center if in additional checkout buttons */
   /*
   ================
@@ -573,7 +586,11 @@
 }
 @media (max-width: 350px) {
   .sezzle-checkout-button-wrapper .sezzle-button-text {
+<<<<<<< HEAD
     font-size: 14px;
+=======
+    font-size: 13px;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
   }
 }
 .sezzle-checkout-button-wrapper .sezzle-button-text.sezzle-thin {
@@ -597,7 +614,11 @@
 }
 @media (max-width: 350px) {
   .sezzle-checkout-button-wrapper .sezzle-inline-text {
+<<<<<<< HEAD
     font-size: 14px;
+=======
+    font-size: 13px;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
   }
 }
 .sezzle-checkout-button-wrapper .payment-amount {
@@ -1649,6 +1670,7 @@
   }
 }
 
+<<<<<<< HEAD
 .sezzle-0e755a63-71bf-4923-8757-35822b6d56e5.sezzle-product-page-widget {
   margin-top: 0px;
 }
@@ -1673,4 +1695,8 @@
   .sezzle-fdd253ee-7262-4d31-83ed-0dac03ed61e1.sezzle-cart-page-widget .sezzle-checkout-button {
     max-width: 240px;
   }
+=======
+.sezzle-4fb38431-8112-4228-8d8c-b85b13146255.sezzle-cart-page-widget .sezzle-checkout-button-wrapper {
+  font-size: 13px;
+>>>>>>> 8ad5b80c64eb5fbe498bf3b8ad44a436e6a95ef0
 }
