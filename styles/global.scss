@@ -347,8 +347,7 @@
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
   display: block;
-  text-align: left;
-  max-width: 450px;
+  text-align: center;
   text-transform: none;
   font-size: 12pt;
   line-height: 25px;
@@ -410,7 +409,7 @@
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 {
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -2010,11 +2009,42 @@
       font-size: 13px;
     }
   }
-
   &.sezzle-cart-page-widget {
     .sezzle-checkout-button-wrapper {
       color: black;
       font-size: 13px;
+    }
+  }
+}
+
+// Southern Hippie
+.sezzle-0e755a63-71bf-4923-8757-35822b6d56e5 {
+  &.sezzle-product-page-widget {
+    margin-top: 0px;
+    .sezzle-button-text {
+      @media screen and (max-width: 479px) {
+        zoom: 0.9;
+      }
+    }
+  }
+}
+
+//Source Vapes
+.sezzle-fdd253ee-7262-4d31-83ed-0dac03ed61e1{
+  &.sezzle-product-page-widget {
+    margin-top: 15px;
+  }
+  &.sezzle-cart-page-widget {
+    margin-top: 10px;
+    .sezzle-button-text {
+      @media screen and (max-width: 1199px) and (min-width: 992px) {
+        max-width: 240px;
+      }
+    }
+    .sezzle-checkout-button {
+      @media screen and (max-width: 1199px) and (min-width: 992px) {
+        max-width: 240px;
+      }
     }
   }
 }
