@@ -2004,8 +2004,16 @@
 
 // Moana Bikini
 .sezzle-4fb38431-8112-4228-8d8c-b85b13146255 {
+  &.sezzle-product-page-widget {
+    .sezzle-checkout-button-wrapper {
+      color: black;
+      font-size: 13px;
+    }
+  }
+
   &.sezzle-cart-page-widget {
     .sezzle-checkout-button-wrapper {
+      color: black;
       font-size: 13px;
     }
   }
