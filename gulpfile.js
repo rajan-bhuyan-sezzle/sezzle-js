@@ -21,10 +21,10 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     htmlmin = require('gulp-htmlmin'),
     rename = require("gulp-rename"),
-    rp = require("request-promise"),
+	rp = require("request-promise"),
     config = { useIAM: true };
 
-var buttonUploadName = 'sezzle-widget0.5.0.js';
+var buttonUploadName = 'sezzle-widget0.5.3rc8.js';
 var bannerUploadName = 'sezzle-banner2.1.1.js';
 
 var globalCssUploadName = 'sezzle-styles-global1.1.827.css';
@@ -45,7 +45,7 @@ gulp.task("cssupload", function() {
 
 gulp.task("upload-widget", function() {
     var indexPath = './sezzle.js'
-    gulp.src(indexPath)
+	gulp.src(indexPath)
         .pipe(rename(buttonUploadName))
         .pipe(s3({
             Bucket: 'sezzle-shopify-application', //  Required
