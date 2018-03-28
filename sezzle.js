@@ -12,7 +12,9 @@ var SezzleJS = function(options) {
       this.xpath.push(options.targetXPath.split('/'));
     } else {
       // options.targetXPath is an array of x-paths
-      this.xpath = options.targetXPath.map(path => path.split('/'));
+      this.xpath = options.targetXPath.map(function(path) {
+				return path.split('/'))
+			};
     }
   }
 
@@ -91,7 +93,7 @@ var SezzleJS = function(options) {
   if (this.hidePrice) {
     this.altVersionTemplate = 'or 4 automatic, interest free payments with %%logo%% %%link%%'.split('%%');
   }
-  
+
   // Search for price elements. If found, assume there is only one in this page
   this.hasPriceClassElement = false;
   this.priceElements = Array.from(document.getElementsByClassName(this.priceElementClass));
@@ -497,8 +499,8 @@ SezzleJS.prototype.renderAwesomeSezzle = function(element, renderelement, index 
 
           var customPriceValueText = document.createTextNode(
             ' of ' + this.getFormattedPrice(element)
-          );    
-          
+          );
+
           customPriceSpanNode.appendChild(customPriceValueText)
 
           customNode.appendChild(customPriceSpanNode);
@@ -685,7 +687,7 @@ SezzleJS.prototype.getFormattedPrice = function(element) {
 
   // Will be used later to replace {price} with price / 4.0 Eg: ${price} USD
   var formatter = priceText.replace(priceString, '{price}');
-  
+
 	// array of strings that come up inside of elements that we want to make sure to strip out
 	var ignoredPriceStrings = [
     "Subtotal",
@@ -838,7 +840,7 @@ SezzleJS.prototype.renderModal = function() {
 {/* <div class="sezzle-checkout-modal-lightbox"><div class="sezzle-checkout-modal"></div></div> */}
   } else {
     modalNode = document.getElementsByClassName('sezzle-checkout-modal-lightbox')[0];
-  } 
+  }
 
   // Event listenr for click in know more button
   Array.from(document.getElementsByClassName('sezzle-know-more'))
