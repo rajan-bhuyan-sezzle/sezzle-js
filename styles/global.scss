@@ -6699,3 +6699,23 @@
     }
   }
 }
+
+// Inflow Style
+.sezzle-e0ecdb65-e79d-457d-a68a-e7eba0855b71 {
+    &.sezzle-product-page-widget {
+        .sezzle-custom-logo {
+            height: 18px !important;
+        }
+        .sezzle-question-mark-icon {
+            margin-bottom: -2px;
+        }
+    }
+    &.sezzle-cart-page-widget {
+        .sezzle-custom-logo {
+            height: 18px !important;
+        }
+        .sezzle-question-mark-icon {
+            margin-bottom: -2px;
+        }
+    }
+}
