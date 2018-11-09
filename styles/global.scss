@@ -100,21 +100,21 @@
 }
 
 .top-content {
-  padding: 30px 30px 20px;
+  padding: 30px 0 20px;
 }
 
-.point {
+.row.point {
   margin: 10px 25px 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   @media (max-width: 600px) {
     margin: 30px 10px 20px;
   }
 
   .modal-icon {
-    width: 62px;
-    float: unset;
-    display: block;
-    margin: 0 auto 2px;
+    width: 100%;
+    float: right;
   }
 }
 
@@ -171,13 +171,14 @@
 }
 
 .sezzle-checkout-modal-lightbox .sezzle-header-text {
-  font-size: 19px;
-  letter-spacing: 0;
+  font-size: 21px;
+  letter-spacing: 0.05pt;
   line-height: 30px;
   text-align: center;
   margin: 10px 70px 13px;
-  color: #909699;
-  font-weight: 300;
+  color: #000;
+  font-weight: 100;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 @media (max-width: 650px) {
   .sezzle-checkout-modal-lightbox .sezzle-header-text {
@@ -220,14 +221,21 @@
   line-height: 16pt;
   color: #666;
   text-align: center;
-  padding: 0 40px 21px;
+  padding: 0 10px 5px;
   display: block;
-  border-radius: 0 0 20px 20px;
-  background-color: #f1f4f6;
 }
-@media (max-width: 650px) {
-  .sezzle-checkout-modal-lightbox .sezzle-footer-text {
-    border-radius: 0px;
+
+.sezzle-checkout-modal-lightbox .sezzle-footer-link-container {
+  .sezzle-footer-link {
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 16pt;
+    color: #666;
+    text-align: center;
+    padding: 0 10px 5px;
+    display: block;
+    text-decoration: underline;
+    text-transform: capitalize;
   }
 }
 
@@ -287,27 +295,25 @@
   left: 50%;
   margin-top: -384px;
   margin-left: -325px;
-
+  padding: 10px 40px;
   z-index: 99999998;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(5, 31, 52, 0.19), 0 6px 6px rgba(5, 31, 52, 0.2);
   border-radius: 20px;
   color: #000;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   transition: all 0.4s ease;
   width: 650px;
 }
 @media (max-width: 650px) {
   .sezzle-checkout-modal-lightbox .sezzle-checkout-modal {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     padding: 50px 20px;
-    margin: 0;
-    border-radius: 0;
-    height: 100%;
+    margin: 25px;
     font-size: 15px;
-    max-width: 100%;
+    max-width: 88%;
     min-width: 320px;
     overflow: auto;
   }
@@ -322,9 +328,8 @@
 }
 
 .modal-description {
-  width: unset;
-  float: unset;
-  text-align: center;
+  float: left;
+  text-align: left;
 
   @media (max-width: 768px) {
     margin: 0 auto;
@@ -371,9 +376,9 @@
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
   display: block;
-  text-align: center;
+  text-align: left;
   text-transform: none;
-  font-size: 12pt;
+  font-size: 11pt;
   line-height: 25px;
   font-weight: 300;
   box-sizing: border-box;
@@ -382,13 +387,13 @@
   letter-spacing: 0.25px;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 }
 @media (max-width: 450px) {
   .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
     font-size: 11pt;
-    text-align: center;
+    text-align: left;
     letter-spacing: .5px;
     line-height: 18px;
   }
@@ -432,13 +437,16 @@
 }
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 {
-  font-size: 18px;
-  text-align: center;
+  font-size: 17px;
+  text-align: left;
   margin: 0 auto;
   color: unset;
+  text-transform: inherit;
+  font-family: "Montserrat", "ProximaNova-Regular", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-weight: 600;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -461,7 +469,7 @@
 }
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-no-thanks {
-  font-size: 40pt;
+  font-size: 20pt;
   color: #b6bdc4;
   font-family: "Arial Rounded", "Helvetica Rounded", Arial, sans-serif;
   opacity: 0.6;
@@ -469,6 +477,14 @@
   position: absolute;
   top: 30px;
   right: 50px;
+}
+.sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-modal-title-logo {
+  max-width: 100%;
+  text-align: center;
+
+  img {
+    max-width: 280px;
+  }
 }
 
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-no-thanks:hover {
