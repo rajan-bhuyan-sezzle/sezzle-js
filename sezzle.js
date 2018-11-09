@@ -1220,7 +1220,7 @@ SezzleJS.prototype.getCSSVersionForMerchant = function(callback) {
       }
     };
 
-    httpRequest.open('GET', this.cssForMerchantURL);
+    httpRequest.open('GET', this.cssForMerchantURL, true);
     httpRequest.responseType = 'json';
     httpRequest.send();
   }
