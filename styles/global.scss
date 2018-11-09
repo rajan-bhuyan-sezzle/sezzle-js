@@ -11,113 +11,28 @@
   overflow-x: hidden;
   color: unset;
 }
-
-// CSS Reset on the modal-lightbox
-.sezzle-checkout-modal-lightbox a,
-.sezzle-checkout-modal-lightbox abbr,
-.sezzle-checkout-modal-lightbox acronym,
-.sezzle-checkout-modal-lightbox address,
-.sezzle-checkout-modal-lightbox applet,
-.sezzle-checkout-modal-lightbox article,
-.sezzle-checkout-modal-lightbox aside,
-.sezzle-checkout-modal-lightbox audio,
-.sezzle-checkout-modal-lightbox b,
-.sezzle-checkout-modal-lightbox big,
-.sezzle-checkout-modal-lightbox blockquote,
-.sezzle-checkout-modal-lightbox body,
-.sezzle-checkout-modal-lightbox canvas,
-.sezzle-checkout-modal-lightbox caption,
-.sezzle-checkout-modal-lightbox center,
-.sezzle-checkout-modal-lightbox cite,
-.sezzle-checkout-modal-lightbox code,
-.sezzle-checkout-modal-lightbox dd,
-.sezzle-checkout-modal-lightbox del,
-.sezzle-checkout-modal-lightbox details,
-.sezzle-checkout-modal-lightbox dfn,
-.sezzle-checkout-modal-lightbox div,
-.sezzle-checkout-modal-lightbox dl,
-.sezzle-checkout-modal-lightbox dt,
-.sezzle-checkout-modal-lightbox em,
-.sezzle-checkout-modal-lightbox embed,
-.sezzle-checkout-modal-lightbox fieldset,
-.sezzle-checkout-modal-lightbox figcaption,
-.sezzle-checkout-modal-lightbox figure,
-.sezzle-checkout-modal-lightbox footer,
-.sezzle-checkout-modal-lightbox form,
-.sezzle-checkout-modal-lightbox h1,
-.sezzle-checkout-modal-lightbox h2,
-.sezzle-checkout-modal-lightbox h3,
-.sezzle-checkout-modal-lightbox h4,
-.sezzle-checkout-modal-lightbox h5,
-.sezzle-checkout-modal-lightbox h6,
-.sezzle-checkout-modal-lightbox header,
-.sezzle-checkout-modal-lightbox hgroup,
-.sezzle-checkout-modal-lightbox html,
-.sezzle-checkout-modal-lightbox i,
-.sezzle-checkout-modal-lightbox iframe,
-.sezzle-checkout-modal-lightbox img,
-.sezzle-checkout-modal-lightbox ins,
-.sezzle-checkout-modal-lightbox kbd,
-.sezzle-checkout-modal-lightbox label,
-.sezzle-checkout-modal-lightbox legend,
-.sezzle-checkout-modal-lightbox li,
-.sezzle-checkout-modal-lightbox mark,
-.sezzle-checkout-modal-lightbox menu,
-.sezzle-checkout-modal-lightbox nav,
-.sezzle-checkout-modal-lightbox object,
-.sezzle-checkout-modal-lightbox ol,
-.sezzle-checkout-modal-lightbox output,
-.sezzle-checkout-modal-lightbox p,
-.sezzle-checkout-modal-lightbox pre,
-.sezzle-checkout-modal-lightbox q,
-.sezzle-checkout-modal-lightbox ruby,
-.sezzle-checkout-modal-lightbox s,
-.sezzle-checkout-modal-lightbox samp,
-.sezzle-checkout-modal-lightbox section,
-.sezzle-checkout-modal-lightbox small,
-.sezzle-checkout-modal-lightbox span,
-.sezzle-checkout-modal-lightbox strike,
-.sezzle-checkout-modal-lightbox strong,
-.sezzle-checkout-modal-lightbox sub,
-.sezzle-checkout-modal-lightbox summary,
-.sezzle-checkout-modal-lightbox sup,
-.sezzle-checkout-modal-lightbox table,
-.sezzle-checkout-modal-lightbox tbody,
-.sezzle-checkout-modal-lightbox td,
-.sezzle-checkout-modal-lightbox tfoot,
-.sezzle-checkout-modal-lightbox th,
-.sezzle-checkout-modal-lightbox thead,
-.sezzle-checkout-modal-lightbox time,
-.sezzle-checkout-modal-lightbox tr,
-.sezzle-checkout-modal-lightbox tt,
-.sezzle-checkout-modal-lightbox u,
-.sezzle-checkout-modal-lightbox ul,
-.sezzle-checkout-modal-lightbox var,
-.sezzle-checkout-modal-lightbox video {
+.sezzle-checkout-modal-lightbox a, .sezzle-checkout-modal-lightbox abbr, .sezzle-checkout-modal-lightbox acronym, .sezzle-checkout-modal-lightbox address, .sezzle-checkout-modal-lightbox applet, .sezzle-checkout-modal-lightbox article, .sezzle-checkout-modal-lightbox aside, .sezzle-checkout-modal-lightbox audio, .sezzle-checkout-modal-lightbox b, .sezzle-checkout-modal-lightbox big, .sezzle-checkout-modal-lightbox blockquote, .sezzle-checkout-modal-lightbox body, .sezzle-checkout-modal-lightbox canvas, .sezzle-checkout-modal-lightbox caption, .sezzle-checkout-modal-lightbox center, .sezzle-checkout-modal-lightbox cite, .sezzle-checkout-modal-lightbox code, .sezzle-checkout-modal-lightbox dd, .sezzle-checkout-modal-lightbox del, .sezzle-checkout-modal-lightbox details, .sezzle-checkout-modal-lightbox dfn, .sezzle-checkout-modal-lightbox div, .sezzle-checkout-modal-lightbox dl, .sezzle-checkout-modal-lightbox dt, .sezzle-checkout-modal-lightbox em, .sezzle-checkout-modal-lightbox embed, .sezzle-checkout-modal-lightbox fieldset, .sezzle-checkout-modal-lightbox figcaption, .sezzle-checkout-modal-lightbox figure, .sezzle-checkout-modal-lightbox footer, .sezzle-checkout-modal-lightbox form, .sezzle-checkout-modal-lightbox h1, .sezzle-checkout-modal-lightbox h2, .sezzle-checkout-modal-lightbox h3, .sezzle-checkout-modal-lightbox h4, .sezzle-checkout-modal-lightbox h5, .sezzle-checkout-modal-lightbox h6, .sezzle-checkout-modal-lightbox header, .sezzle-checkout-modal-lightbox hgroup, .sezzle-checkout-modal-lightbox html, .sezzle-checkout-modal-lightbox i, .sezzle-checkout-modal-lightbox iframe, .sezzle-checkout-modal-lightbox img, .sezzle-checkout-modal-lightbox ins, .sezzle-checkout-modal-lightbox kbd, .sezzle-checkout-modal-lightbox label, .sezzle-checkout-modal-lightbox legend, .sezzle-checkout-modal-lightbox li, .sezzle-checkout-modal-lightbox mark, .sezzle-checkout-modal-lightbox menu, .sezzle-checkout-modal-lightbox nav, .sezzle-checkout-modal-lightbox object, .sezzle-checkout-modal-lightbox ol, .sezzle-checkout-modal-lightbox output, .sezzle-checkout-modal-lightbox p, .sezzle-checkout-modal-lightbox pre, .sezzle-checkout-modal-lightbox q, .sezzle-checkout-modal-lightbox ruby, .sezzle-checkout-modal-lightbox s, .sezzle-checkout-modal-lightbox samp, .sezzle-checkout-modal-lightbox section, .sezzle-checkout-modal-lightbox small, .sezzle-checkout-modal-lightbox span, .sezzle-checkout-modal-lightbox strike, .sezzle-checkout-modal-lightbox strong, .sezzle-checkout-modal-lightbox sub, .sezzle-checkout-modal-lightbox summary, .sezzle-checkout-modal-lightbox sup, .sezzle-checkout-modal-lightbox table, .sezzle-checkout-modal-lightbox tbody, .sezzle-checkout-modal-lightbox td, .sezzle-checkout-modal-lightbox tfoot, .sezzle-checkout-modal-lightbox th, .sezzle-checkout-modal-lightbox thead, .sezzle-checkout-modal-lightbox time, .sezzle-checkout-modal-lightbox tr, .sezzle-checkout-modal-lightbox tt, .sezzle-checkout-modal-lightbox u, .sezzle-checkout-modal-lightbox ul, .sezzle-checkout-modal-lightbox var, .sezzle-checkout-modal-lightbox video {
   vertical-align: baseline;
   box-sizing: border-box;
   line-height: normal;
 }
-
 .top-content {
   padding: 30px 0 20px;
 }
-
 .row.point {
   margin: 10px 25px 5px;
   margin-left: 10px;
   margin-right: 10px;
-
-  @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
+  .point {
     margin: 30px 10px 20px;
   }
-
-  .modal-icon {
-    width: 100%;
-    float: right;
-  }
 }
-
+.point .modal-icon {
+  width: 50px;
+  float: right;
+}
 .sezzle-checkout-modal-lightbox .sezzle-modal-title {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 35px;
@@ -126,7 +41,6 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-modal-title .sezzle-title-text-center {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
@@ -141,7 +55,6 @@
     text-align: center;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-modal-title .sezzle-title-text-right {
   padding-top: 13px;
 }
@@ -169,7 +82,6 @@
     margin: 15px 0 10px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-header-text {
   font-size: 21px;
   letter-spacing: 0.05pt;
@@ -178,7 +90,7 @@
   margin: 10px 70px 13px;
   color: #000;
   font-weight: 100;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: Montserrat;
 }
 @media (max-width: 650px) {
   .sezzle-checkout-modal-lightbox .sezzle-header-text {
@@ -200,7 +112,6 @@
     margin: 5px 30px 30px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-sub-header-text {
   font-size: 13px;
   text-align: center;
@@ -214,7 +125,6 @@
     font-size: 12px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-footer-text {
   font-size: 13px;
   letter-spacing: 0;
@@ -225,19 +135,18 @@
   display: block;
 }
 
-.sezzle-checkout-modal-lightbox .sezzle-footer-link-container {
-  .sezzle-footer-link {
-    font-size: 13px;
-    letter-spacing: 0;
-    line-height: 16pt;
-    color: #666;
-    text-align: center;
-    padding: 0 10px 5px;
-    display: block;
-    text-decoration: underline;
-    text-transform: capitalize;
-  }
+.sezzle-checkout-modal-lightbox .sezzle-footer-link-container .sezzle-footer-link {
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 16pt;
+  color: #666;
+  text-align: center;
+  padding: 0 10px 5px;
+  display: block;
+  text-decoration: underline;
+  text-transform: capitalize;
 }
+
 
 .sezzle-checkout-modal-lightbox .sezzle-simply-select {
   display: -ms-flexbox;
@@ -264,7 +173,6 @@
     font-size: 13px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-simply-select img {
   height: 35px !important;
   padding-right: 6px;
@@ -274,21 +182,17 @@
     height: 26px !important;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-simply-select .sezzle-inline-text-left {
   padding-top: 3px;
   padding-right: 6px;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-simply-select .sezzle-inline-text-right {
   padding-top: 3px;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal-hidden {
   transition: all 0.4s ease;
   margin-top: -1500vh;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal {
   position: fixed;
   top: 50%;
@@ -301,7 +205,7 @@
   box-shadow: 0 10px 20px rgba(5, 31, 52, 0.19), 0 6px 6px rgba(5, 31, 52, 0.2);
   border-radius: 20px;
   color: #000;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
   transition: all 0.4s ease;
   width: 650px;
 }
@@ -326,21 +230,19 @@
     margin: 20px auto;
   }
 }
-
 .modal-description {
   float: left;
   text-align: left;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .modal-description {
     margin: 0 auto;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-visible-flex {
   display: -ms-flexbox;
   display: flex;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h1 {
   font-size: 18px;
   text-align: center;
@@ -351,7 +253,6 @@
     font-size: 16px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal .sezzle-modal-logo {
   height: 65px !important;
   display: block;
@@ -367,13 +268,11 @@
     height: 35px !important;
   }
 }
-
 @media (max-width: 600px) {
   .sezzle-checkout-modal-lightbox .sezzle-hide-600 {
     display: none;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
   display: block;
   text-align: left;
@@ -385,8 +284,9 @@
   color: #7d8588;
   margin: 5px 0 !important;
   letter-spacing: 0.25px;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
     text-align: left;
   }
 }
@@ -394,11 +294,10 @@
   .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p {
     font-size: 11pt;
     text-align: left;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     line-height: 18px;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal p small {
   display: block;
   box-sizing: border-box;
@@ -410,13 +309,11 @@
     font-size: 7.5pt;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal .sezzle-checkout-button {
   max-width: 200px;
   display: block;
   margin: 0 auto;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal a {
   display: block;
   margin: 4px auto 0;
@@ -430,12 +327,10 @@
   transition: 0.15s;
   opacity: 0.65;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal a:hover {
   transition: 0.1s;
   opacity: 1;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 {
   font-size: 17px;
   text-align: left;
@@ -444,12 +339,12 @@
   text-transform: inherit;
   font-family: "Montserrat", "ProximaNova-Regular", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
   font-weight: 600;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 {
     text-align: left;
   }
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal h2 img {
   margin: 0 4px;
   display: inline-block;
@@ -459,15 +354,12 @@
   top: 6px;
   vertical-align: initial;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-continue-to-checkout {
   background-color: #17ce6a;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-continue-to-checkout:hover {
   background-color: #02ef72;
 }
-
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-no-thanks {
   font-size: 20pt;
   color: #b6bdc4;
@@ -481,16 +373,9 @@
 .sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-modal-title-logo {
   max-width: 100%;
   text-align: center;
-
-  img {
-    max-width: 280px;
-  }
 }
-
-.sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-no-thanks:hover {
-  transition: 0.15s;
-  opacity: 1;
-  cursor: pointer;
+.sezzle-checkout-modal-lightbox .sezzle-checkout-modal div.sezzle-modal-title-logo img {
+  max-width: 280px;
 }
 
 // CSS Reset on the modal-lightbox
