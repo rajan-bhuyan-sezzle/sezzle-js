@@ -24,9 +24,9 @@ var gulp = require('gulp'),
     rp = require("request-promise"),
     config = { useIAM: true };
 
-var buttonUploadName = 'sezzle-widget1.1.2-tobi.js';
+var buttonUploadName = 'sezzle-widget1.1.3-tobi.js';
 var bannerUploadName = 'sezzle-banner2.1.1.js';
-var globalCssUploadName = 'sezzle-styles-global2.0.000.css';
+var globalCssUploadName = 'sezzle-styles-global2.0.004-tobi.css';
 
 gulp.task("cssupload", function() {
     // bucket base url https://d3svog4tlx445w.cloudfront.net/
