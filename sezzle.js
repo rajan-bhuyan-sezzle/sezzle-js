@@ -514,8 +514,6 @@ SezzleJS.prototype.renderAwesomeSezzle = function(element, renderelement, index 
                 var logoNode = document.createElement("img");
                 logoNode.className = "sezzle-logo " + this.imageClassName;
                 logoNode.src = this.imageURL;
-                logoNode.style.verticalAlign = "top";
-                logoNode.style.marginLeft ="5px";
                 sezzleButtonText.appendChild(logoNode);
                 break;
                         // changed from learn-more to link as that is what current altVersionTemplates use
